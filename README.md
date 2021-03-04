@@ -1,4 +1,4 @@
-#This app was created to learn Typescript inside the React Framework.
+# This app was created to learn Typescript inside the React Framework.
 
 created by Aiden Carrie
 

@@ -3,7 +3,14 @@ import logo from "./logo.svg";
 import "./App.css";
 import Message from "./Message";
 
-class App extends Component<any> {
+const initialState = {
+  name: "aiden",
+  message: "state message",
+};
+
+type State = Readonly<typeof initialState>;
+
+class App extends Component<any, State> {
   //#region first lesson
   // let firstValue: string = "Aiden";
   // let firstValue: number[] = [2, 4, 5, 6, 9];
@@ -24,22 +31,26 @@ class App extends Component<any> {
   // };
   //#endregion
 
-  componentWillMount() {
-    //runs first
-    //like constructor
-  }
+  //#region component mounting (const/desc)
+  // componentWillMount() {
+  //   //runs first
+  //   //like constructor
+  // }
 
-  componentDidMount() {
-    //runs second
-    //like deconstructor?
-  }
+  // componentDidMount() {
+  //   //runs second
+  //   //like deconstructor?
+  // }
+  //#endregion
+
+  readonly state: State = initialState;
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Message message="This is a simple passed message" />
+          <Message name={this.state.name} message={this.state.message} />
         </header>
       </div>
     );

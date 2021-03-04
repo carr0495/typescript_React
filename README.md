@@ -1,3 +1,7 @@
+#This app was created to learn Typescript inside the React Framework.
+
+created by Aiden Carrie
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
